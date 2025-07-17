@@ -108,13 +108,19 @@ WSGI_APPLICATION = 'delivery.wsgi.application'
 # }
 
 
+# Принудительное использование PostgreSQL без fallback
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL'),
+    'default': dj_database_url.parse(
+        os.environ.get('DATABASE_URL'),  # Обязательно!
         conn_max_age=600,
-        ssl_require=True  # Для Railway обязательно
+        engine='django.db.backends.postgresql',
+        ssl_require=True
     )
 }
+
+# Экстренная проверка (выбросит ошибку при отсутствии DATABASE_URL)
+if not os.environ.get('DATABASE_URL'):
+    raise RuntimeError("DATABASE_URL environment variable is missing!")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
