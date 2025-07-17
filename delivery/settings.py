@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-1i&(-6ltp$%$8z(1!63_ko(88!tonkq5hky769d0dq-@(u!5^9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "absolutdeliverybackend-production.up.railway.app"]
 
 
 # Application definition
@@ -121,6 +121,7 @@ DATABASES = {
 # Экстренная проверка (выбросит ошибку при отсутствии DATABASE_URL)
 if not os.environ.get('DATABASE_URL'):
     raise RuntimeError("DATABASE_URL environment variable is missing!")
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
