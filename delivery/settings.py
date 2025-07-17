@@ -168,9 +168,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "https://absolutdeliverybackend-production.up.railway.app/",
+    "https://absolutdeliverybackend-production.up.railway.app",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
+
+# Настройки безопасности для CSRF
+CSRF_TRUSTED_ORIGINS = [
+    "https://absolutdeliverybackend-production.up.railway.app",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+# Разрешенные методы
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
