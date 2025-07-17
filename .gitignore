@@ -1,0 +1,97 @@
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media/
+staticfiles/
+
+# Backup files # 
+*.bak 
+*.swp 
+*~
+
+# IDE #
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# Virtual environment #
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Database migrations (если не хотите коммитить миграции)
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Environment variables #
+.env
+.env.local
+.env.dev
+.env.prod
+
+# Static files #
+/static/
+/static_collected/
+
+# macOS #
+.DS_Store
+
+# Windows #
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python #
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Testing #
+.coverage
+htmlcov/
+.pytest_cache/
+unitest.xml
+
+# Jupyter Notebook #
+.ipynb_checkpoints
+
+# PyCharm #
+.idea/
+*.iml
+
+# Visual Studio Code #
+.vscode/
+*.code-workspace
+
+# Coverage reports #
+.coverage
+.coverage.*
