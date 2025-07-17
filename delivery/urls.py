@@ -24,7 +24,7 @@ from delivery_absolute.views.login import login
 urlpatterns = [
     path('admin/', admin.site.urls), # Эндпоинты для админки
     path('api/v1/', include('delivery_absolute.urls')), # Эндпоинты для доставок
-    path('api/auth/login/', login, name='login'),  # эндпоинт для авторизации
-    path('api/auth/token/', obtain_auth_token, name='api_token_auth'), # Эндпоинт для получения токена
+    path('api/v1/auth/login/', login, name='login'),  # эндпоинт для авторизации
+    path('api/v1/auth/token/', obtain_auth_token, name='api_token_auth'), # Эндпоинт для получения токена
 ]
 
