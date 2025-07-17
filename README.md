@@ -10,9 +10,13 @@
   <br>
   venv/Scripts/activate
 - Необходимо установить все зависимости из requirements.txt (Python 3.11)
+  <br>
   pip install -r requirements.txt
 - Дальше следует выполнить миграции:
+  <br>
   python manage.py makemigrations
 - Запуск локального сервера
+  <br>
   python manage.py runserver
+  <br>
 Сервер запущен! Теперь можно подключить фронт
